@@ -5,25 +5,32 @@ namespace denis909\bootstrap4;
 class ActiveField extends \denis909\theme\ActiveField
 {
 
-    const DATE_INPUT = DateInput::class;
+    const SELECT2 = Select2::class;
 
-    const TIME_INPUT = TimeInput::class;
+    const DATE_PICKER = DatePicker::class;
 
-    const DATETIME_INPUT = DateTimeInput::class;
+    const TIME_PICKER = TimePicker::class;
+
+    const DATETIME_PICKER = DateTimePicker::class;
 
     public function date(array $options = [])
     {
-        return $this->widget(static::DATE_INPUT, $options);
+        return $this->widget(static::DATE_PICKER, $options);
     }
 
     public function datetime(array $options = [])
     {
-        return $this->widget(static::DATETIME_INPUT, $options);
+        return $this->widget(static::DATETIME_PICKER, $options);
     }
 
     public function time(array $options = [])
     {
-        return $this->widget(static::TIME_INPUT, $options);
+        return $this->widget(static::TIME_PICKER, $options);
+    }
+
+    public function select2(array $options = [])
+    {
+        return $this->widget(static::SELECT2, $options);
     }
     
 }

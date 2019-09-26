@@ -4,14 +4,15 @@ namespace sbadmin2;
 
 use yii\helpers\ArrayHelper;
 
-class TimeInput extends \kartik\time\TimePicker
+class TimePicker extends \kartik\time\TimePicker
 {
 
     public $bsVersion = '4';
 
     public $defaultPluginOptions = [
         'autoclose' => true,
-        'format' => 'hh:ii:ss'
+        'format' => 'hh:ii:ss',
+        'bsDependencyEnabled' => false
     ];
 
     public function init()

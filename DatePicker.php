@@ -4,14 +4,15 @@ namespace denis909\bootstrap4;
 
 use yii\helpers\ArrayHelper;
 
-class DateInput extends \kartik\date\DatePicker
+class DatePicker extends \kartik\date\DatePicker
 {
 
 	public $bsVersion = '4';
 
 	public $defaultPluginOptions = [
         'autoclose' => true,
-        'format' => 'yyyy-mm-dd'
+        'format' => 'yyyy-mm-dd',
+        'bsDependencyEnabled' => false
 	];
 
 	public function init()

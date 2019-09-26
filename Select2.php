@@ -19,7 +19,8 @@ class Select2 extends \kartik\select2\Select2
 
     public $defaultPluginOptions = [
         'multiple' => false,
-        'closeOnSelect' => true
+        'closeOnSelect' => true,
+        'allowClear' => true
     ];
 
     public function init()

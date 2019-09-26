@@ -20,21 +20,21 @@ class Theme extends \denis909\theme\Theme
 
     public function date(array $options = [])
     {
-        Yii::$app['bsDependencyEnabled'] = false;
+        Yii::$app->params['bsDependencyEnabled'] = false;
 
         return $this->widget(static::DATE_PICKER, $options);
     }
 
     public function datetime(array $options = [])
     {
-        Yii::$app['bsDependencyEnabled'] = false;
+        Yii::$app->params['bsDependencyEnabled'] = false;
 
         return $this->widget(static::DATETIME_PICKER, $options);
     }
 
     public function time(array $options = [])
     {
-        Yii::$app['bsDependencyEnabled'] = false;
+        Yii::$app->params['bsDependencyEnabled'] = false;
         
         return $this->widget(static::TIME_PICKER, $options);
     }
@@ -43,7 +43,7 @@ class Theme extends \denis909\theme\Theme
     {
         $options['theme'] = ArrayHelper::getValue($options, 'theme', 'krajee-bs4');
 
-        Yii::$app['bsDependencyEnabled'] = false;
+        Yii::$app->params['bsDependencyEnabled'] = false;
 
         return $this->widget(static::SELECT2, $options);
     }

@@ -1,0 +1,11 @@
+{
+    "name": "denis909/yii2-theme-bootstrap4",
+    "require": {
+        "denis909/yii2-theme": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "denis909\\bootstrap4\\": ""
+        }
+    }
+}

@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\bootstrap;
+namespace denis909\bootstrap4;
 
 use yii\helpers\ArrayHelper;
 

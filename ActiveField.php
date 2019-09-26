@@ -5,13 +5,13 @@ namespace denis909\bootstrap4;
 class ActiveField extends \denis909\theme\ActiveField
 {
 
-    const SELECT2 = Select2::class;
+    const SELECT2 = Theme::SELECT2;
 
-    const DATE_PICKER = DatePicker::class;
+    const DATE_PICKER = Theme::DATE_PICKER;
 
-    const TIME_PICKER = TimePicker::class;
+    const TIME_PICKER = Theme::TIME_PICKER;
 
-    const DATETIME_PICKER = DateTimePicker::class;
+    const DATETIME_PICKER = Theme::DATETIME_PICKER;
 
     public function date(array $options = [])
     {

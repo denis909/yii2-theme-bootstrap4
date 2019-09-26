@@ -15,21 +15,29 @@ class ActiveField extends \denis909\theme\ActiveField
 
     public function date(array $options = [])
     {
+        Yii::$app['bsDependencyEnabled'] = false;
+
         return $this->widget(static::DATE_PICKER, $options);
     }
 
     public function datetime(array $options = [])
     {
+        Yii::$app['bsDependencyEnabled'] = false;
+
         return $this->widget(static::DATETIME_PICKER, $options);
     }
 
     public function time(array $options = [])
     {
+        Yii::$app['bsDependencyEnabled'] = false;
+
         return $this->widget(static::TIME_PICKER, $options);
     }
 
     public function select2(array $options = [])
     {
+        Yii::$app['bsDependencyEnabled'] = false;
+        
         return $this->widget(static::SELECT2, $options);
     }
     

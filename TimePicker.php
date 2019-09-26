@@ -11,8 +11,7 @@ class TimePicker extends \kartik\time\TimePicker
 
     public $defaultPluginOptions = [
         'autoclose' => true,
-        'format' => 'hh:ii:ss',
-        'bsDependencyEnabled' => false
+        'format' => 'hh:ii:ss'
     ];
 
     public function init()

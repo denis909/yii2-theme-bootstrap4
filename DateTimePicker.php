@@ -11,8 +11,7 @@ class DateTimePicker extends \kartik\datetime\DateTimePicker
 
 	public $defaultPluginOptions = [
         'autoclose' => true,
-        'format' => 'yyyy-mm-dd hh:ii:ss',
-        'bsDependencyEnabled' => false
+        'format' => 'yyyy-mm-dd hh:ii:ss'
 	];
 
 	public function init()

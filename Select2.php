@@ -9,7 +9,7 @@ class Select2 extends \kartik\select2\Select2
 
     public $showToggleAll = false;
                     
-    public $theme = 'default';
+    public $theme = 'krajee-bs4';//'default';
 
     public $bsVersion = '4';
 
@@ -18,9 +18,8 @@ class Select2 extends \kartik\select2\Select2
     ];
 
     public $defaultPluginOptions = [
-        'multiple' => true,
-        'closeOnSelect' => true,
-        'bsDependencyEnabled' => false
+        'multiple' => false,
+        'closeOnSelect' => true
     ];
 
     public function init()

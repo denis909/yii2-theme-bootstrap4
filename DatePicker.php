@@ -11,8 +11,7 @@ class DatePicker extends \kartik\date\DatePicker
 
 	public $defaultPluginOptions = [
         'autoclose' => true,
-        'format' => 'yyyy-mm-dd',
-        'bsDependencyEnabled' => false
+        'format' => 'yyyy-mm-dd'
 	];
 
 	public function init()

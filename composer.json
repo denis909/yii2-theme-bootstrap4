@@ -1,7 +1,11 @@
 {
     "name": "denis909/yii2-theme-bootstrap4",
+    "license": "MIT",
     "require": {
-        "denis909/yii2-theme": "dev-master"
+        "denis909/yii2-theme": "dev-master",
+        "kartik-v/yii2-widget-timepicker": "^1.0",
+        "kartik-v/yii2-widget-datepicker": "^1.4",
+        "kartik-v/yii2-widget-datetimepicker": "^1.4"        
     },
     "autoload": {
         "psr-4": {

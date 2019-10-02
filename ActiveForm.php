@@ -2,6 +2,8 @@
 
 namespace denis909\bootstrap4;
 
+use yii\helpers\ArrayHelper;
+
 class ActiveForm extends \denis909\theme\ActiveForm
 {
 

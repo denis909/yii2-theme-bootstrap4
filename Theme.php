@@ -18,6 +18,8 @@ class Theme extends \denis909\theme\Theme
 
     const DATETIME_PICKER = DateTimePicker::class;
 
+    const DATERANGE_PICKER = DateRangePicker::class;
+
     public function date(array $options = [])
     {
         Yii::$app->params['bsDependencyEnabled'] = false;
@@ -30,6 +32,13 @@ class Theme extends \denis909\theme\Theme
         Yii::$app->params['bsDependencyEnabled'] = false;
 
         return $this->widget(static::DATETIME_PICKER, $options);
+    }
+
+    public function daterange(array $options = [])
+    {
+        Yii::$app->params['bsDependencyEnabled'] = false;
+
+        return $this->widget(static::DATERANGE_PICKER, $options);
     }
 
     public function time(array $options = [])

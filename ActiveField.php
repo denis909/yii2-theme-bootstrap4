@@ -2,6 +2,8 @@
 
 namespace denis909\bootstrap4;
 
+use Yii;
+
 class ActiveField extends \denis909\theme\ActiveField
 {
 
@@ -13,11 +15,20 @@ class ActiveField extends \denis909\theme\ActiveField
 
     const DATETIME_PICKER = Theme::DATETIME_PICKER;
 
+    const DATERANGE_PICKER = Theme::DATERANGE_PICKER;
+
     public function date(array $options = [])
     {
         Yii::$app->params['bsDependencyEnabled'] = false;
 
         return $this->widget(static::DATE_PICKER, $options);
+    }
+
+    public function daterange(array $options = [])
+    {
+        Yii::$app->params['bsDependencyEnabled'] = false;
+
+        return $this->widget(static::DATERANGE_PICKER, $options);
     }
 
     public function datetime(array $options = [])

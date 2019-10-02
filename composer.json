@@ -6,7 +6,8 @@
         "kartik-v/yii2-widget-timepicker": "^1.0",
         "kartik-v/yii2-widget-datepicker": "^1.4",
         "kartik-v/yii2-widget-datetimepicker": "^1.4",
-        "kartik-v/yii2-widget-select2": "^2.1"        
+        "kartik-v/yii2-widget-select2": "^2.1",
+        "kartik-v/yii2-date-range": "^1.7"
     },
     "autoload": {
         "psr-4": {

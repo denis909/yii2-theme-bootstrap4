@@ -20,6 +20,10 @@ class Theme extends \denis909\theme\Theme
 
     const DATERANGE_PICKER = DateRangePicker::class;
 
+    public $defaultSubmitButtonOptions = [
+        'class' => 'btn btn-primary'
+    ];
+
     public function date(array $options = [])
     {
         Yii::$app->params['bsDependencyEnabled'] = false;
@@ -55,6 +59,13 @@ class Theme extends \denis909\theme\Theme
         Yii::$app->params['bsDependencyEnabled'] = false;
 
         return $this->widget(static::SELECT2, $options);
+    }
+
+    public function submitButton($name, array $options = [])
+    {
+        $options = ArrayHelper::merge($this->defaultSubmitButtonOptions, $options);
+
+        return parent::submitButton($name, $options);
     }
     
 }

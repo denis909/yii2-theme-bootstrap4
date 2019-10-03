@@ -3,8 +3,9 @@
 namespace denis909\bootstrap4;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
-class ActiveField extends \denis909\theme\ActiveField
+class ActiveField extends \yii\bootstrap4\ActiveField
 {
 
     const SELECT2 = Theme::SELECT2;
@@ -16,6 +17,15 @@ class ActiveField extends \denis909\theme\ActiveField
     const DATETIME_PICKER = Theme::DATETIME_PICKER;
 
     const DATERANGE_PICKER = Theme::DATERANGE_PICKER;
+
+    public $checkOptions = [
+        'class' => ['widget' => 'control-input'],
+        'labelOptions' => [
+            'class' => ['widget' => 'control-label']
+        ]
+    ];
+
+    public $checkTemplate = "{label}\n<br>{input}\n{error}\n{hint}";
 
     public function date(array $options = [])
     {
@@ -50,6 +60,15 @@ class ActiveField extends \denis909\theme\ActiveField
         Yii::$app->params['bsDependencyEnabled'] = false;
         
         return $this->widget(static::SELECT2, $options);
+    }
+
+    public function checkbox($options = [], $enclosedByLabel = false)
+    {
+        $options['labelOptions'] = ArrayHelper::getValue($options, 'labelOptions', [
+            'class' => ''
+        ]);
+
+        return parent::checkbox($options, $enclosedByLabel);
     }
     
 }

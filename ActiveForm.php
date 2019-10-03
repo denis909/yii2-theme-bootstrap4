@@ -3,8 +3,9 @@
 namespace denis909\bootstrap4;
 
 use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
 
-class ActiveForm extends \denis909\theme\ActiveForm
+class ActiveForm extends \yii\bootstrap4\ActiveForm
 {
 
     public $fieldClass = ActiveField::class;
@@ -17,7 +18,7 @@ class ActiveForm extends \denis909\theme\ActiveForm
     {
         $options = ArrayHelper::merge($this->defaultSubmitButtonOptions, $options);
 
-        return parent::submitButton($name, $options);
+        return Html::submitButton($name, $options);
     }
     
 }

@@ -20,6 +20,15 @@ class Theme extends \denis909\theme\Theme
 
     const DATERANGE_PICKER = DateRangePicker::class;
 
+    const BREADCRUMBS = Breadcrumbs::class;
+
+    public $defaultBreadcrumbsOptions = [
+        'options' => [
+            'class' => 'mb-0',
+            'style' => 'background-color: inherit;'
+        ]
+    ];
+
     public $defaultSubmitButtonOptions = [
         'class' => 'btn btn-primary'
     ];
@@ -67,5 +76,12 @@ class Theme extends \denis909\theme\Theme
 
         return parent::submitButton($name, $options);
     }
-    
+ 
+    public function breadcrumbs(array $options = [])
+    {   
+        $options = ArrayHelper::merge($this->defaultBreadcrumbsOptions, $options);
+
+        return $this->widget(static::BREADCRUMBS, $options);
+    }
+
 }

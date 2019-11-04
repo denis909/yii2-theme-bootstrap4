@@ -22,14 +22,14 @@ class Theme extends \denis909\theme\Theme
 
     const BREADCRUMBS = Breadcrumbs::class;
 
-    public $defaultBreadcrumbsOptions = [
+    public $breadcrumbsOptions = [
         'options' => [
             'class' => 'mb-0',
             'style' => 'background-color: inherit;'
         ]
     ];
 
-    public $defaultSubmitButtonOptions = [
+    public $submitButtonOptions = [
         'class' => 'btn btn-primary'
     ];
 
@@ -68,20 +68,6 @@ class Theme extends \denis909\theme\Theme
         Yii::$app->params['bsDependencyEnabled'] = false;
 
         return $this->widget(static::SELECT2, $options);
-    }
-
-    public function submitButton($name, array $options = [])
-    {
-        $options = ArrayHelper::merge($this->defaultSubmitButtonOptions, $options);
-
-        return parent::submitButton($name, $options);
-    }
- 
-    public function breadcrumbs(array $options = [])
-    {   
-        $options = ArrayHelper::merge($this->defaultBreadcrumbsOptions, $options);
-
-        return $this->widget(static::BREADCRUMBS, $options);
     }
 
 }

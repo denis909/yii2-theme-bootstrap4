@@ -22,6 +22,8 @@ class Theme extends \denis909\theme\Theme
 
     const BREADCRUMBS = Breadcrumbs::class;
 
+    const TABS = Tabs::class;    
+
     public $breadcrumbsOptions = [
         'options' => [
             'class' => 'mb-0',
@@ -32,6 +34,8 @@ class Theme extends \denis909\theme\Theme
     public $submitButtonOptions = [
         'class' => 'btn btn-primary'
     ];
+
+    public $tabsOptions = [];
 
     public function date(array $options = [])
     {
@@ -69,5 +73,14 @@ class Theme extends \denis909\theme\Theme
 
         return $this->widget(static::SELECT2, $options);
     }
+
+    public function tabs(array $options = [])
+    {
+        $options['theme'] = ArrayHelper::getValue($options, 'theme', 'krajee-bs4');
+
+        Yii::$app->params['bsDependencyEnabled'] = false;
+
+        return $this->widget(static::TABS, $options);
+    }    
 
 }

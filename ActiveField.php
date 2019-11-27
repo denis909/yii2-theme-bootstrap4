@@ -4,8 +4,9 @@ namespace denis909\bootstrap4;
 
 use Yii;
 use yii\helpers\ArrayHelper;
+use denis909\theme\ActiveFieldInterface;
 
-class ActiveField extends \yii\bootstrap4\ActiveField
+class ActiveField extends \yii\bootstrap4\ActiveField implements ActiveFieldInterface
 {
 
     const SELECT2 = Theme::SELECT2;
@@ -69,6 +70,11 @@ class ActiveField extends \yii\bootstrap4\ActiveField
         ]);
 
         return parent::checkbox($options, $enclosedByLabel);
+    }
+
+    public function imageFileInput(array $options = [])
+    {
+        return $this->fileInput($options);
     }
     
 }

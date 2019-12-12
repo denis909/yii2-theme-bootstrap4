@@ -4,7 +4,7 @@ namespace denis909\bootstrap4;
 
 use Yii;
 use yii\helpers\ArrayHelper;
-use denis909\theme\ActiveFieldInterface;
+use denis909\yii\ActiveFieldInterface;
 
 class ActiveField extends \yii\bootstrap4\ActiveField implements ActiveFieldInterface
 {

@@ -5,7 +5,7 @@ namespace denis909\bootstrap4;
 use Yii;
 use yii\helpers\ArrayHelper;
 
-class Theme extends \denis909\theme\Theme
+class Theme extends \denis909\yii\Theme
 {
 
     const ACTIVE_FORM = ActiveForm::class;    

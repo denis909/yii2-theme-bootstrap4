@@ -4,11 +4,17 @@ namespace denis909\bootstrap4;
 
 use Yii;
 use yii\helpers\ArrayHelper;
+use denis909\yii\Bootstrap4Carousel;
+use denis909\yii\Bootstrap4CarouselItem;
 
 class Theme extends \denis909\yii\Theme
 {
 
-    const ACTIVE_FORM = ActiveForm::class;    
+    const CAROUSEL = Bootstrap4Carousel::class;
+
+    const CAROUSEL_ITEM = Bootstrap4CarouselItem::class;
+
+    const ACTIVE_FORM = ActiveForm::class; 
 
     const SELECT2 = Select2::class;
 
@@ -81,6 +87,16 @@ class Theme extends \denis909\yii\Theme
         Yii::$app->params['bsDependencyEnabled'] = false;
 
         return $this->widget(static::TABS, $options);
-    }    
+    }
+
+    public function carousel(array $options = [])
+    {
+        return $this->widget(static::CAROUSEL, array_merge($options, ['theme' => $this]));
+    }
+
+    public function carouselItem(array $options = [])
+    {
+        return $this->widget(static::CAROUSEL_ITEM, $options);
+    }
 
 }

@@ -10,9 +10,13 @@ class ActiveForm extends \yii\bootstrap4\ActiveForm
 
     public $fieldClass = ActiveField::class;
 
-    public $defaultSubmitButtonOptions = [
-        'class' => 'btn btn-primary'
-    ];
+    public $defaultSubmitButtonOptions = ['class' => 'btn btn-primary'];
+
+    public $enableAjaxValidation = false;
+
+    public $enableClientValidation = false;
+
+    public $enableClientScript = false;
 
     public function submitButton($name, array $options = [])
     {

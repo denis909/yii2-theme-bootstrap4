@@ -2,27 +2,24 @@
 
 namespace denis909\bootstrap4;
 
-use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
+use denis909\yii\ActiveFormInterface;
+use denis909\yii\ActiveFormTrait;
 
-class ActiveForm extends \yii\bootstrap4\ActiveForm
+class ActiveForm extends \yii\bootstrap4\ActiveForm implements ActiveFormInterface
 {
+
+    use ActiveFormTrait;
 
     public $fieldClass = ActiveField::class;
 
-    public $defaultSubmitButtonOptions = ['class' => 'btn btn-primary'];
+    public $submitButtonOptions = ['class' => 'btn btn-primary'];
+
+    public $saveButtonOptions = ['class' => 'btn btn-light'];
 
     public $enableAjaxValidation = false;
 
     public $enableClientValidation = false;
 
     public $enableClientScript = false;
-
-    public function submitButton($name, array $options = [])
-    {
-        $options = ArrayHelper::merge($this->defaultSubmitButtonOptions, $options);
-
-        return Html::submitButton($name, $options);
-    }
     
 }

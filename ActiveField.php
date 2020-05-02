@@ -5,9 +5,12 @@ namespace denis909\bootstrap4;
 use Yii;
 use yii\helpers\ArrayHelper;
 use denis909\yii\ActiveFieldInterface;
+use denis909\yii\ActiveFieldTrait;
 
 class ActiveField extends \yii\bootstrap4\ActiveField implements ActiveFieldInterface
 {
+
+    use ActiveFieldTrait;
 
     const SELECT2 = Theme::SELECT2;
 

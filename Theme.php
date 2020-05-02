@@ -30,16 +30,11 @@ class Theme extends \denis909\yii\Theme
 
     const TABS = Tabs::class;    
 
-    public $breadcrumbsOptions = [
-        'options' => [
-            'class' => 'mb-0',
-            'style' => 'background-color: inherit;'
-        ]
-    ];
+    public $breadcrumbsOptions = ['options' => ['class' => 'mb-0', 'style' => 'background-color: inherit;']];
 
-    public $submitButtonOptions = [
-        'class' => 'btn btn-primary'
-    ];
+    public $submitButtonOptions = ['class' => 'btn btn-primary'];
+
+    public $saveButtonOptions = ['class' => 'btn btn-light'];
 
     public $tabsOptions = [];
 

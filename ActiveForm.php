@@ -12,10 +12,6 @@ class ActiveForm extends \yii\bootstrap4\ActiveForm implements ActiveFormInterfa
 
     public $fieldClass = ActiveField::class;
 
-    public $submitButtonOptions = ['class' => 'btn btn-primary'];
-
-    public $saveButtonOptions = ['class' => 'btn btn-light'];
-
     public $enableAjaxValidation = false;
 
     public $enableClientValidation = false;
